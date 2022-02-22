@@ -13,9 +13,24 @@
         
         <div class="text-center text-3xl space-y-24 my-16">
             <p class="text 4xl text-white font-bold">MASUKAN PIN</p>
-            <input class="border-2 border-black-600" type="password" placeholder="Masukan pin">
-            <a href="/tunai.html" class="text-white"><label>ENTER</label></a>
-            <h1 class="font-bold text-white">TEKAN 'ENTER' JIKA SELESAI <br> MEMASUKAN PIN</h1>
-        </div>    
+            <form action="" onsubmit="pin()">
+                <input type="password" required placeholder="123456" id="angkapin" class="border-2 text-black border-black h-8 mt-32">
+                <input type="submit" class="text-white" value="ENTER">
+            </form>
+            <div class="w-8/12 mx-auto text-white">
+                <h2 class="mt-32">
+                    <h2>TEKAN 'ENTER' JIKA SELESAI MEMASUKAN PIN</h2>          
+      </div> 
+</div>        
 </body>
-</html>
+<script>
+    function pin() {
+        let pin = document.getElementById("angkapin").value;
+        if (pin == '123456') {
+            window.open('ambiltunai.html', 'blank');
+            window.close('pin.html?');
+        } else {
+            alert('pin anda salah')
+        }
+    }
+</script>              
